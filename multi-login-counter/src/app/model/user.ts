@@ -1,4 +1,8 @@
 export class User {
 
-// TODO Create frontend model
+  public username?: string;
+  public  name?: string;
+  public  password?: string;
+  public  role?: string;
+  public  token?: string;
 }
