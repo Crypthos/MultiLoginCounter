@@ -18,16 +18,14 @@
         </div>
         <div class="form-floating mb-3">
           <select class="form-select" id="floatingSelect" aria-label="Role" name="role" [(ngModel)]="role">
-            <option selected>Choose a role</option>
-            <option value="1">User</option>
-            <option value="1">Administrator</option>
+            <option *ngFor="let role of roles" [value]="role">{{role}}</option>
           </select>
           <label for="floatingSelect">Role</label>
         </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button class="btn btn-outline-success" type="button">Login</button>
+          <button class="btn btn-outline-success" type="button" (click)="onLogin()">Login</button>
         </div>
-        <a routerLink="" class="text-primary" style="text-decoration: none"> Register here </a>
+        <a routerLink="/signup" class="text-primary" style="text-decoration: none"> Register here </a>
       </form>
     </div>
     <div class="col-md-2">

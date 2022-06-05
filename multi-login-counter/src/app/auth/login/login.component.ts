@@ -24,4 +24,7 @@ export class LoginComponent implements OnInit {
 
 //  TODO add button function
 
+  onLogin() {
+  //  TODO add service and backend call
+  }
 }
