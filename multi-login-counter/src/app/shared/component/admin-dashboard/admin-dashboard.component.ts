@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../../../service/auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -8,12 +9,14 @@ import {AuthService} from "../../../service/auth.service";
 })
 export class AdminDashboardComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private route: Router ) { }
 
   ngOnInit(): void {
   }
 
-  onLogout() {
-    this.authService.logout();
+    public logout(){
+    localStorage.removeItem("token");
+    this.route.navigate(['/'])
+    return "";
   }
 }

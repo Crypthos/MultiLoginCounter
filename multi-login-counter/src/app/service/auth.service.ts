@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {User} from "../model/user";
 import {Router} from "@angular/router";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +12,13 @@ export class AuthService {
 
   loginUrl: string = '';
   signUpUrl: string = '';
+  //Optie twee
+  private apiServerUrl = environment.apiBaseUrl
 
   constructor(private http: HttpClient, private route: Router) {
 
-    this.loginUrl = "http://localhost:8080/auth/login";
-    this.signUpUrl = "http://localhost:8080/auth/register";
+    this.loginUrl = "http://localhost:8888/auth/login";
+    this.signUpUrl = "http://localhost:8888/auth/register";
   }
 
 

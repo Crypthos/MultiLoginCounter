@@ -6,8 +6,8 @@ import {UserDashboardComponent} from "./shared/component/user-dashboard/user-das
 import {AdminDashboardComponent} from "./shared/component/admin-dashboard/admin-dashboard.component";
 
 const routes: Routes = [
-  {path: 'signup', component: SignupComponent},
   {path: '' ,  component: LoginComponent},
+  {path: 'signup', component: SignupComponent},
   {path: 'user', component: UserDashboardComponent},
   {path: 'admin', component: AdminDashboardComponent},
 ];

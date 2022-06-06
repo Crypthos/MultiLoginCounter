@@ -34,16 +34,20 @@ export class SignupComponent implements OnInit {
 
     this.authService.signUp(this.user).subscribe(res => {
     if (res == null){
-      alert("Registration failed");
+     console.log(alert("Registration failed"));
       this.ngOnInit();
     } else {
       console.log("Registration successful.");
-      this.route.navigate([ '/']);
+      console.log(this.route.navigate([ '/']));
      }
     }, error => {
       alert("Registration failed.");
-      this.ngOnInit();
+      console.log(this.ngOnInit());
     })
+
+
   }
+
+
 
 }
